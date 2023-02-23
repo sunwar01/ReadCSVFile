@@ -1,3 +1,1 @@
-Peter, Hansen, 25
-Thomas, Tog, 344
-Lars, Larsen, 22
+Peter,Hansen,25,Thomas,Tog,344,Lars,Larsen,22
