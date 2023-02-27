@@ -10,9 +10,9 @@ import java.io.IOException;
 public class ReadCSVApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ReadCSVApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(ReadCSVApplication.class.getResource("readcsv-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Main Window");
         stage.setScene(scene);
         stage.show();
     }

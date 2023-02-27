@@ -5,12 +5,10 @@ import java.sql.*;
 
 public class ReadFile {
 
-    private static Connection connection;
-
 
     public void ReadFileMethod() throws IOException, SQLException {
 
-        connection = DatabaseConnection.getInstance().getConnection();
+        Connection connection = DatabaseConnection.getInstance().getConnection();
         connection.setAutoCommit(false);
         PreparedStatement pstmt = connection.prepareStatement("INSERT INTO Persons VALUES (?,?,?);");
 
@@ -35,6 +33,8 @@ public class ReadFile {
         connection.commit();
 
         sc.close();
+
+        connection.close();
     }
 
 

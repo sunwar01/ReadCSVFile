@@ -11,9 +11,15 @@ public class DatabaseConnection {
 
     private Connection connection;
 
+
     private DatabaseConnection(){
         try {
-            String url = "jdbc:sqlserver://DESKTOP-DEI896B:1433;DatabaseName=ReadCSV;user=sa;password=Lukasersej123!;encrypt=true;trustServerCertificate=true;";
+            String serverName = "DESKTOP-DEI896B";
+            String databaseName = "ReadCSV";
+            String userName = "sa";
+            String password = "Lukasersej123!";
+
+            String url = "jdbc:sqlserver://" + serverName + ":1433;DatabaseName=" + databaseName + ";user=" + userName + ";password="+ password + ";encrypt=true;trustServerCertificate=true;";
             connection = DriverManager.getConnection(url);
         } catch (SQLException e) {
             System.err.println("can not create connection");
